@@ -1,0 +1,180 @@
+/*
+ * Keypad.c
+ *
+ *  Created on: Oct 6, 2023
+ *      Author: Lenovo
+ */
+
+#include"Keypad.h"
+#include"gpio.h"
+#include <util/delay.h>
+
+
+
+/*******************************************************************************
+ *                      Functions Prototypes(Private)                          *
+ *******************************************************************************/
+
+#ifndef STANDARD_KEYPAD
+
+#if (KEYPAD_COLUMNS == 3)
+/*
+ * Function responsible for mapping the switch number in the keypad to
+ * its corresponding functional number in the proteus for 4x3 keypad
+ */
+static uint8 KEYPAD_4x3_adjustKeyNumber(uint8 button_number);
+#elif (KEYPAD_COLUMNS == 4)
+/*
+ * Function responsible for mapping the switch number in the keypad to
+ * its corresponding functional number in the proteus for 4x4 keypad
+ */
+static uint8 KEYPAD_4x4_adjustKeyNumber(uint8 button_number);
+#endif
+
+#endif /* STANDARD_KEYPAD */
+
+/*******************************************************************************
+ *                      Functions Definitions                                  *
+ *******************************************************************************/
+
+
+uint8 KEYPAD_getPressedKey(void)
+{
+	uint8 row, column;
+	/*set all the keypad rows as input at the beginning */
+	GPIO_setupPinDirection(KEYPAD_ROW_PORT_ID , KEYPAD_FIRST_ROW_PIN_ID , PIN_INPUT);
+	GPIO_setupPinDirection(KEYPAD_ROW_PORT_ID , KEYPAD_FIRST_ROW_PIN_ID+1 , PIN_INPUT);
+	GPIO_setupPinDirection(KEYPAD_ROW_PORT_ID , KEYPAD_FIRST_ROW_PIN_ID+2 , PIN_INPUT);
+	GPIO_setupPinDirection(KEYPAD_ROW_PORT_ID , KEYPAD_FIRST_ROW_PIN_ID+3 , PIN_INPUT);
+
+	/*set all the keypad columns as input at the beginning */
+	GPIO_setupPinDirection(KEYPAD_ROW_PORT_ID , KEYPAD_FIRST_COLUMN_PIN_ID , PIN_INPUT);
+	GPIO_setupPinDirection(KEYPAD_ROW_PORT_ID , KEYPAD_FIRST_COLUMN_PIN_ID+1 , PIN_INPUT);
+	GPIO_setupPinDirection(KEYPAD_ROW_PORT_ID , KEYPAD_FIRST_COLUMN_PIN_ID+2 , PIN_INPUT);
+#if (KEYPAD_COLUMNS == 4)
+	GPIO_setupPinDirection(KEYPAD_ROW_PORT_ID , KEYPAD_FIRST_COLUMN_PIN_ID+3 , PIN_INPUT);
+#endif
+
+	/*loop on the rows in an infinite loop to put zero on each single row and make it output
+	 * then put 1 on it to make it output , and increment to the next row and repeat this sequence
+	 */
+	while(1)
+	{
+		for (row=0 ; row<KEYPAD_ROWS ; row++)
+		{
+			/*
+			 * Each time setup the direction for all keypad port as input pins,
+			 * except this row will be output pin
+			 */
+			GPIO_setupPinDirection(KEYPAD_ROW_PORT_ID, KEYPAD_FIRST_ROW_PIN_ID+row , PIN_OUTPUT);
+
+			/* Set/Clear the row output pin */
+			GPIO_writePin(KEYPAD_ROW_PORT_ID , KEYPAD_FIRST_ROW_PIN_ID+row , KEYPAD_BUTTON_PRESSED);
+
+
+		for (column=0; column <KEYPAD_COLUMNS ; column++)
+		{
+			/* Check if the switch is pressed in this column */
+			if (GPIO_readPin(KEYPAD_COLUMN_PORT_ID,KEYPAD_FIRST_COLUMN_PIN_ID) == KEYPAD_BUTTON_PRESSED)
+			{
+#if (KEYPAD_COLUMNS == 3)
+#ifdef STANDARD_KEYPAD
+				return ((row*KEYPAD_NUM_COLS)+col+1);
+#else
+				return KEYPAD_4x3_adjustKeyNumber((row*KEYPAD_NUM_COLS)+col+1);
+#endif
+				//return KEYPAD_4X3_adjustKeyNumber ((row*KEYPAD_COLUMNS)+column+1);
+#elif (KEYPAD_COLUMNS == 4)
+#ifdef STANDARD_KEYPAD
+				return ((row*KEYPAD_NUM_COLS)+col+1);
+#else
+				return KEYPAD_4x4_adjustKeyNumber((row*KEYPAD_COLUMNS)+column+1);
+#endif
+				//return KEYPAD_4X4_adjustKeyNumber((row*KEYPAD_COLUMNS)+column+1);
+#endif
+			}
+		}
+			//return the previous row to its original state (input) to prevent making two rows output
+			// then set the new row as output without any problems
+			GPIO_setupPinDirection(KEYPAD_ROW_PORT_ID , KEYPAD_FIRST_ROW_PIN_ID+row , PIN_INPUT);
+			//delay due to multiple function calls in while(1) will make the proteus hard or not responding
+			_delay_ms(5); /* Add small delay to fix CPU load issue in proteus */
+		}
+	}
+}
+
+#ifndef STANDARD_KEYPAD
+
+#if (KEYPAD_COLUMNS == 3)
+
+static uint8 KEYPAD_4X3_adjustKeyNumber (uint8 button_number)
+{
+	uint8 keypad_button = 0;
+	switch (button_number)
+	{
+	case 10: keypad_button = '*'; //ASCII code for '*'
+	break;
+	case 11 : keypad_button = 0;
+	break;
+	case 12 : keypad_button ='#'; //ASCII Code for '#'
+	break;
+	default : keypad_button = button_number;
+	break;
+	}
+	return keypad_button;
+}
+
+
+#elif (KEYPAD_COLUMNS == 4)
+
+/*
+ * Description :
+ * Update the keypad pressed button value with the correct one in keypad 4x4 shape
+ */
+static uint8 KEYPAD_4x4_adjustKeyNumber(uint8 button_number)
+{
+	uint8 Keypad_Button = 0;
+	switch (button_number)
+	{
+	case 1 : Keypad_Button = 7;
+	break;
+	case 2 : Keypad_Button = 8;
+	break;
+	case 3 : Keypad_Button = 9;
+	break;
+	case 4 : Keypad_Button = '/'; //ASCII code of division
+	break;
+	case 5 : Keypad_Button = 4;
+	break;
+	case 6 : Keypad_Button = 5;
+	break;
+	case 7 : Keypad_Button = 6;
+	break;
+	case 8 : Keypad_Button='*'; //ASCII code of '*'
+	break;
+	case 9 : Keypad_Button = 1;
+	break;
+	case 10 : Keypad_Button = 2;
+	break;
+	case 11 : Keypad_Button = 3;
+	break;
+	case 12 : Keypad_Button = '-'; //ASCII code of '-'
+	break;
+	case 13 : Keypad_Button = 13;
+	break;
+	case 14 : Keypad_Button = 0;
+	break;
+	case 15 : Keypad_Button = '='; //ASCII code of '='
+	break;
+	case 16 : Keypad_Button = '+';	//ASCII code of '+'
+	break;
+
+	default: Keypad_Button = button_number; break;
+	}
+	return Keypad_Button;
+}
+
+#endif
+
+#endif /* STANDARD_KEYPAD */
+

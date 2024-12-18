@@ -1,0 +1,1834 @@
+19:02:04 **** Clean-only build of configuration Debug for project MC1 ****
+make clean 
+rm -rf  ./GPIO.o ./Keypad.o ./LCD.o ./TIMER1.o ./mc1.o ./twi.o ./uart.o  sizedummy  MC1.lss  ./GPIO.d ./Keypad.d ./LCD.d ./TIMER1.d ./mc1.d ./twi.d ./uart.d  MC1.elf
+ 
+19:02:04 **** Build of configuration Debug for project MC1 ****
+make all 
+Building file: ../GPIO.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"GPIO.d" -MT"GPIO.o" -c -o "GPIO.o" "../GPIO.c"
+../GPIO.c: In function 'GPIO_readPort':
+../GPIO.c:312: warning: unused variable 'value'
+../GPIO.c:345: warning: control reaches end of non-void function
+Finished building: ../GPIO.c
+ 
+Building file: ../Keypad.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"Keypad.d" -MT"Keypad.o" -c -o "Keypad.o" "../Keypad.c"
+In file included from ../Keypad.c:10:
+c:/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+Finished building: ../Keypad.c
+ 
+Building file: ../LCD.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"LCD.d" -MT"LCD.o" -c -o "LCD.o" "../LCD.c"
+In file included from ../LCD.c:8:
+c:/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+../LCD.c: In function 'LCD_intgerToString':
+../LCD.c:204: warning: implicit declaration of function 'itoa'
+Finished building: ../LCD.c
+ 
+Building file: ../TIMER1.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"TIMER1.d" -MT"TIMER1.o" -c -o "TIMER1.o" "../TIMER1.c"
+../TIMER1.c: In function 'Timer1_setCallBack':
+../TIMER1.c:82: warning: function return types not compatible due to 'volatile'
+Finished building: ../TIMER1.c
+ 
+Building file: ../mc1.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"mc1.d" -MT"mc1.o" -c -o "mc1.o" "../mc1.c"
+In file included from ../mc1.c:15:
+c:/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+Finished building: ../mc1.c
+ 
+Building file: ../twi.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"twi.d" -MT"twi.o" -c -o "twi.o" "../twi.c"
+Finished building: ../twi.c
+ 
+Building file: ../uart.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"uart.d" -MT"uart.o" -c -o "uart.o" "../uart.c"
+Finished building: ../uart.c
+ 
+Building target: MC1.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,MC1.map -mmcu=atmega32 -o "MC1.elf"  ./GPIO.o ./Keypad.o ./LCD.o ./TIMER1.o ./mc1.o ./twi.o ./uart.o   
+Finished building target: MC1.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S MC1.elf  >"MC1.lss"
+Finished building: MC1.lss
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 MC1.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:   10988 bytes (33.5% Full)
+(.text + .data + .bootloader)
+
+Data:        136 bytes (6.6% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+19:02:06 **** Clean-only build of configuration Debug for project MC2 ****
+make clean 
+rm -rf  ./Buzzer.o ./DC_motor.o ./GPIO.o ./PWM.o ./TIMER1.o ./external_eeprom.o ./mc2.o ./twi.o ./uart.o  sizedummy  MC2.lss  ./Buzzer.d ./DC_motor.d ./GPIO.d ./PWM.d ./TIMER1.d ./external_eeprom.d ./mc2.d ./twi.d ./uart.d  MC2.elf
+ 
+19:02:06 **** Build of configuration Debug for project MC2 ****
+make all 
+Building file: ../Buzzer.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"Buzzer.d" -MT"Buzzer.o" -c -o "Buzzer.o" "../Buzzer.c"
+Finished building: ../Buzzer.c
+ 
+Building file: ../DC_motor.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"DC_motor.d" -MT"DC_motor.o" -c -o "DC_motor.o" "../DC_motor.c"
+Finished building: ../DC_motor.c
+ 
+Building file: ../GPIO.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"GPIO.d" -MT"GPIO.o" -c -o "GPIO.o" "../GPIO.c"
+../GPIO.c: In function 'GPIO_readPort':
+../GPIO.c:312: warning: unused variable 'value'
+../GPIO.c:345: warning: control reaches end of non-void function
+Finished building: ../GPIO.c
+ 
+Building file: ../PWM.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"PWM.d" -MT"PWM.o" -c -o "PWM.o" "../PWM.c"
+Finished building: ../PWM.c
+ 
+Building file: ../TIMER1.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"TIMER1.d" -MT"TIMER1.o" -c -o "TIMER1.o" "../TIMER1.c"
+../TIMER1.c: In function 'Timer1_setCallBack':
+../TIMER1.c:82: warning: function return types not compatible due to 'volatile'
+Finished building: ../TIMER1.c
+ 
+Building file: ../external_eeprom.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"external_eeprom.d" -MT"external_eeprom.o" -c -o "external_eeprom.o" "../external_eeprom.c"
+Finished building: ../external_eeprom.c
+ 
+Building file: ../mc2.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"mc2.d" -MT"mc2.o" -c -o "mc2.o" "../mc2.c"
+In file included from ../mc2.c:18:
+c:/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+Finished building: ../mc2.c
+ 
+Building file: ../twi.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"twi.d" -MT"twi.o" -c -o "twi.o" "../twi.c"
+Finished building: ../twi.c
+ 
+Building file: ../uart.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"uart.d" -MT"uart.o" -c -o "uart.o" "../uart.c"
+Finished building: ../uart.c
+ 
+Building target: MC2.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,MC2.map -mmcu=atmega32 -o "MC2.elf"  ./Buzzer.o ./DC_motor.o ./GPIO.o ./PWM.o ./TIMER1.o ./external_eeprom.o ./mc2.o ./twi.o ./uart.o   
+Finished building target: MC2.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S MC2.elf  >"MC2.lss"
+Finished building: MC2.lss
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 MC2.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:    9960 bytes (30.4% Full)
+(.text + .data + .bootloader)
+
+Data:        282 bytes (13.8% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+19:21:47 **** Incremental Build of configuration Debug for project MC1 ****
+make all 
+Building file: ../GPIO.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"GPIO.d" -MT"GPIO.o" -c -o "GPIO.o" "../GPIO.c"
+../GPIO.c: In function 'GPIO_readPort':
+../GPIO.c:312: warning: unused variable 'value'
+../GPIO.c:345: warning: control reaches end of non-void function
+Finished building: ../GPIO.c
+ 
+Building file: ../Keypad.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"Keypad.d" -MT"Keypad.o" -c -o "Keypad.o" "../Keypad.c"
+In file included from ../Keypad.c:10:
+c:/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+Finished building: ../Keypad.c
+ 
+Building file: ../LCD.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"LCD.d" -MT"LCD.o" -c -o "LCD.o" "../LCD.c"
+In file included from ../LCD.c:8:
+c:/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+../LCD.c: In function 'LCD_intgerToString':
+../LCD.c:204: warning: implicit declaration of function 'itoa'
+Finished building: ../LCD.c
+ 
+Building file: ../TIMER1.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"TIMER1.d" -MT"TIMER1.o" -c -o "TIMER1.o" "../TIMER1.c"
+../TIMER1.c: In function 'Timer1_setCallBack':
+../TIMER1.c:82: warning: function return types not compatible due to 'volatile'
+Finished building: ../TIMER1.c
+ 
+Building file: ../mc1.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"mc1.d" -MT"mc1.o" -c -o "mc1.o" "../mc1.c"
+In file included from ../mc1.c:15:
+c:/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+../mc1.c:31: error: invalid initializer
+../mc1.c:32: error: invalid initializer
+make: *** [mc1.o] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+19:21:47 **** Incremental Build of configuration Debug for project MC2 ****
+make all 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 MC2.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:    9960 bytes (30.4% Full)
+(.text + .data + .bootloader)
+
+Data:        282 bytes (13.8% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+19:22:36 **** Incremental Build of configuration Debug for project MC1 ****
+make all 
+Building file: ../mc1.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"mc1.d" -MT"mc1.o" -c -o "mc1.o" "../mc1.c"
+In file included from ../mc1.c:15:
+c:/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+Finished building: ../mc1.c
+ 
+Building file: ../uart.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"uart.d" -MT"uart.o" -c -o "uart.o" "../uart.c"
+Finished building: ../uart.c
+ 
+Building target: MC1.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,MC1.map -mmcu=atmega32 -o "MC1.elf"  ./GPIO.o ./Keypad.o ./LCD.o ./TIMER1.o ./mc1.o ./uart.o   
+Finished building target: MC1.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S MC1.elf  >"MC1.lss"
+Finished building: MC1.lss
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 MC1.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:   10992 bytes (33.5% Full)
+(.text + .data + .bootloader)
+
+Data:        148 bytes (7.2% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+19:22:37 **** Incremental Build of configuration Debug for project MC2 ****
+make all 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 MC2.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:    9960 bytes (30.4% Full)
+(.text + .data + .bootloader)
+
+Data:        282 bytes (13.8% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+19:24:18 **** Incremental Build of configuration Debug for project MC1 ****
+make all 
+Building file: ../mc1.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"mc1.d" -MT"mc1.o" -c -o "mc1.o" "../mc1.c"
+In file included from ../mc1.c:15:
+c:/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+Finished building: ../mc1.c
+ 
+Building target: MC1.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,MC1.map -mmcu=atmega32 -o "MC1.elf"  ./GPIO.o ./Keypad.o ./LCD.o ./TIMER1.o ./mc1.o ./uart.o   
+Finished building target: MC1.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S MC1.elf  >"MC1.lss"
+Finished building: MC1.lss
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 MC1.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:   10992 bytes (33.5% Full)
+(.text + .data + .bootloader)
+
+Data:        148 bytes (7.2% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+19:24:19 **** Incremental Build of configuration Debug for project MC2 ****
+make all 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 MC2.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:    9960 bytes (30.4% Full)
+(.text + .data + .bootloader)
+
+Data:        282 bytes (13.8% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+19:34:20 **** Clean-only build of configuration Debug for project HMI_ECU ****
+make clean 
+rm -rf  ./MICROC1.o ./gpio.o ./keypad.o ./lcd.o ./timer1.o ./uart.o  sizedummy  HMI_ECU.lss  ./MICROC1.d ./gpio.d ./keypad.d ./lcd.d ./timer1.d ./uart.d  HMI_ECU.elf
+ 
+19:34:20 **** Build of configuration Debug for project HMI_ECU ****
+make all 
+Building file: ../MICROC1.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"MICROC1.d" -MT"MICROC1.o" -c -o "MICROC1.o" "../MICROC1.c"
+In file included from ../MICROC1.c:8:
+c:/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+Finished building: ../MICROC1.c
+ 
+Building file: ../gpio.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"gpio.d" -MT"gpio.o" -c -o "gpio.o" "../gpio.c"
+Finished building: ../gpio.c
+ 
+Building file: ../keypad.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"keypad.d" -MT"keypad.o" -c -o "keypad.o" "../keypad.c"
+In file included from ../keypad.c:14:
+c:/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+Finished building: ../keypad.c
+ 
+Building file: ../lcd.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"lcd.d" -MT"lcd.o" -c -o "lcd.o" "../lcd.c"
+In file included from ../lcd.c:13:
+c:/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+../lcd.c: In function 'LCD_intgerToString':
+../lcd.c:209: warning: implicit declaration of function 'itoa'
+Finished building: ../lcd.c
+ 
+Building file: ../timer1.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"timer1.d" -MT"timer1.o" -c -o "timer1.o" "../timer1.c"
+../timer1.c: In function 'Timer1_setCallBack':
+../timer1.c:115: warning: function return types not compatible due to 'volatile'
+Finished building: ../timer1.c
+ 
+Building file: ../uart.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"uart.d" -MT"uart.o" -c -o "uart.o" "../uart.c"
+Finished building: ../uart.c
+ 
+Building target: HMI_ECU.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,HMI_ECU.map -mmcu=atmega32 -o "HMI_ECU.elf"  ./MICROC1.o ./gpio.o ./keypad.o ./lcd.o ./timer1.o ./uart.o   
+Finished building target: HMI_ECU.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S HMI_ECU.elf  >"HMI_ECU.lss"
+Finished building: HMI_ECU.lss
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 HMI_ECU.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:   15422 bytes (47.1% Full)
+(.text + .data + .bootloader)
+
+Data:        198 bytes (9.7% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+19:34:21 **** Incremental Build of configuration Debug for project MC1 ****
+make all 
+Building file: ../LCD.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"LCD.d" -MT"LCD.o" -c -o "LCD.o" "../LCD.c"
+In file included from ../LCD.c:8:
+c:/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+../LCD.c: In function 'LCD_intgerToString':
+../LCD.c:204: warning: implicit declaration of function 'itoa'
+Finished building: ../LCD.c
+ 
+Building file: ../mc1.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"mc1.d" -MT"mc1.o" -c -o "mc1.o" "../mc1.c"
+In file included from ../mc1.c:15:
+c:/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+Finished building: ../mc1.c
+ 
+Building target: MC1.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,MC1.map -mmcu=atmega32 -o "MC1.elf"  ./GPIO.o ./Keypad.o ./LCD.o ./TIMER1.o ./mc1.o ./uart.o   
+Finished building target: MC1.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S MC1.elf  >"MC1.lss"
+Finished building: MC1.lss
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 MC1.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:   10992 bytes (33.5% Full)
+(.text + .data + .bootloader)
+
+Data:        148 bytes (7.2% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+19:34:22 **** Incremental Build of configuration Debug for project MC2 ****
+make all 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 MC2.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:    9960 bytes (30.4% Full)
+(.text + .data + .bootloader)
+
+Data:        282 bytes (13.8% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+19:34:22 **** Clean-only build of configuration Debug for project control_ECU ****
+make clean 
+rm -rf  ./MICROC2.o ./buzzer.o ./external_eeprom.o ./gpio.o ./motor.o ./pwm.o ./timer1.o ./twi.o ./uart.o  sizedummy  control_ECU.lss  ./MICROC2.d ./buzzer.d ./external_eeprom.d ./gpio.d ./motor.d ./pwm.d ./timer1.d ./twi.d ./uart.d  control_ECU.elf
+ 
+19:34:22 **** Build of configuration Debug for project control_ECU ****
+make all 
+Building file: ../MICROC2.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"MICROC2.d" -MT"MICROC2.o" -c -o "MICROC2.o" "../MICROC2.c"
+In file included from ../MICROC2.c:9:
+c:/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+Finished building: ../MICROC2.c
+ 
+Building file: ../buzzer.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"buzzer.d" -MT"buzzer.o" -c -o "buzzer.o" "../buzzer.c"
+Finished building: ../buzzer.c
+ 
+Building file: ../external_eeprom.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"external_eeprom.d" -MT"external_eeprom.o" -c -o "external_eeprom.o" "../external_eeprom.c"
+Finished building: ../external_eeprom.c
+ 
+Building file: ../gpio.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"gpio.d" -MT"gpio.o" -c -o "gpio.o" "../gpio.c"
+Finished building: ../gpio.c
+ 
+Building file: ../motor.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"motor.d" -MT"motor.o" -c -o "motor.o" "../motor.c"
+Finished building: ../motor.c
+ 
+Building file: ../pwm.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"pwm.d" -MT"pwm.o" -c -o "pwm.o" "../pwm.c"
+Finished building: ../pwm.c
+ 
+Building file: ../timer1.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"timer1.d" -MT"timer1.o" -c -o "timer1.o" "../timer1.c"
+../timer1.c: In function 'Timer1_setCallBack':
+../timer1.c:115: warning: function return types not compatible due to 'volatile'
+Finished building: ../timer1.c
+ 
+Building file: ../twi.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"twi.d" -MT"twi.o" -c -o "twi.o" "../twi.c"
+Finished building: ../twi.c
+ 
+Building file: ../uart.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"uart.d" -MT"uart.o" -c -o "uart.o" "../uart.c"
+Finished building: ../uart.c
+ 
+Building target: control_ECU.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,control_ECU.map -mmcu=atmega32 -o "control_ECU.elf"  ./MICROC2.o ./buzzer.o ./external_eeprom.o ./gpio.o ./motor.o ./pwm.o ./timer1.o ./twi.o ./uart.o   
+Finished building target: control_ECU.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S control_ECU.elf  >"control_ECU.lss"
+Finished building: control_ECU.lss
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 control_ECU.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:    8436 bytes (25.7% Full)
+(.text + .data + .bootloader)
+
+Data:         44 bytes (2.1% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+19:36:37 **** Incremental Build of configuration Debug for project HMI_ECU ****
+make all 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 HMI_ECU.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:   15422 bytes (47.1% Full)
+(.text + .data + .bootloader)
+
+Data:        198 bytes (9.7% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+19:36:37 **** Incremental Build of configuration Debug for project MC1 ****
+make all 
+Building file: ../GPIO.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"GPIO.d" -MT"GPIO.o" -c -o "GPIO.o" "../GPIO.c"
+Finished building: ../GPIO.c
+ 
+Building file: ../Keypad.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"Keypad.d" -MT"Keypad.o" -c -o "Keypad.o" "../Keypad.c"
+In file included from ../Keypad.c:10:
+c:/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+Finished building: ../Keypad.c
+ 
+Building file: ../LCD.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"LCD.d" -MT"LCD.o" -c -o "LCD.o" "../LCD.c"
+In file included from ../LCD.c:8:
+c:/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+../LCD.c: In function 'LCD_intgerToString':
+../LCD.c:204: warning: implicit declaration of function 'itoa'
+Finished building: ../LCD.c
+ 
+Building target: MC1.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,MC1.map -mmcu=atmega32 -o "MC1.elf"  ./GPIO.o ./Keypad.o ./LCD.o ./TIMER1.o ./mc1.o ./uart.o   
+Finished building target: MC1.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S MC1.elf  >"MC1.lss"
+Finished building: MC1.lss
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 MC1.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:   10978 bytes (33.5% Full)
+(.text + .data + .bootloader)
+
+Data:        148 bytes (7.2% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+19:36:38 **** Incremental Build of configuration Debug for project MC2 ****
+make all 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 MC2.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:    9960 bytes (30.4% Full)
+(.text + .data + .bootloader)
+
+Data:        282 bytes (13.8% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+19:36:38 **** Incremental Build of configuration Debug for project control_ECU ****
+make all 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 control_ECU.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:    8436 bytes (25.7% Full)
+(.text + .data + .bootloader)
+
+Data:         44 bytes (2.1% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+19:37:34 **** Incremental Build of configuration Debug for project HMI_ECU ****
+make all 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 HMI_ECU.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:   15422 bytes (47.1% Full)
+(.text + .data + .bootloader)
+
+Data:        198 bytes (9.7% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+19:37:34 **** Incremental Build of configuration Debug for project MC1 ****
+make all 
+Building file: ../mc1.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"mc1.d" -MT"mc1.o" -c -o "mc1.o" "../mc1.c"
+In file included from ../mc1.c:15:
+c:/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+Finished building: ../mc1.c
+ 
+Building target: MC1.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,MC1.map -mmcu=atmega32 -o "MC1.elf"  ./GPIO.o ./Keypad.o ./LCD.o ./TIMER1.o ./mc1.o ./uart.o   
+Finished building target: MC1.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S MC1.elf  >"MC1.lss"
+Finished building: MC1.lss
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 MC1.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:   10580 bytes (32.3% Full)
+(.text + .data + .bootloader)
+
+Data:        136 bytes (6.6% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+19:37:35 **** Incremental Build of configuration Debug for project MC2 ****
+make all 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 MC2.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:    9960 bytes (30.4% Full)
+(.text + .data + .bootloader)
+
+Data:        282 bytes (13.8% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+19:37:35 **** Incremental Build of configuration Debug for project control_ECU ****
+make all 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 control_ECU.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:    8436 bytes (25.7% Full)
+(.text + .data + .bootloader)
+
+Data:         44 bytes (2.1% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+19:38:22 **** Incremental Build of configuration Debug for project MC1 ****
+make all 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 MC1.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:   10580 bytes (32.3% Full)
+(.text + .data + .bootloader)
+
+Data:        136 bytes (6.6% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+19:38:22 **** Incremental Build of configuration Debug for project MC2 ****
+make all 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 MC2.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:    9960 bytes (30.4% Full)
+(.text + .data + .bootloader)
+
+Data:        282 bytes (13.8% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+19:38:40 **** Incremental Build of configuration Debug for project MC1 ****
+make all 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 MC1.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:   10580 bytes (32.3% Full)
+(.text + .data + .bootloader)
+
+Data:        136 bytes (6.6% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+19:39:35 **** Incremental Build of configuration Debug for project MC1 ****
+make all 
+Building file: ../mc1.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"mc1.d" -MT"mc1.o" -c -o "mc1.o" "../mc1.c"
+In file included from ../mc1.c:15:
+c:/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+Finished building: ../mc1.c
+ 
+Building target: MC1.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,MC1.map -mmcu=atmega32 -o "MC1.elf"  ./GPIO.o ./Keypad.o ./LCD.o ./TIMER1.o ./mc1.o ./uart.o   
+Finished building target: MC1.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S MC1.elf  >"MC1.lss"
+Finished building: MC1.lss
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 MC1.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:   10580 bytes (32.3% Full)
+(.text + .data + .bootloader)
+
+Data:        136 bytes (6.6% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+19:39:36 **** Incremental Build of configuration Debug for project MC2 ****
+make all 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 MC2.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:    9960 bytes (30.4% Full)
+(.text + .data + .bootloader)
+
+Data:        282 bytes (13.8% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+20:03:02 **** Build of configuration Debug for project HMI_ECU ****
+make all 
+Building file: ../MICROC1.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"MICROC1.d" -MT"MICROC1.o" -c -o "MICROC1.o" "../MICROC1.c"
+In file included from ../MICROC1.c:8:
+c:/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+Finished building: ../MICROC1.c
+ 
+Building file: ../gpio.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"gpio.d" -MT"gpio.o" -c -o "gpio.o" "../gpio.c"
+Finished building: ../gpio.c
+ 
+Building file: ../keypad.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"keypad.d" -MT"keypad.o" -c -o "keypad.o" "../keypad.c"
+In file included from ../keypad.c:14:
+c:/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+Finished building: ../keypad.c
+ 
+Building file: ../lcd.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"lcd.d" -MT"lcd.o" -c -o "lcd.o" "../lcd.c"
+In file included from ../lcd.c:13:
+c:/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+../lcd.c: In function 'LCD_intgerToString':
+../lcd.c:209: warning: implicit declaration of function 'itoa'
+Finished building: ../lcd.c
+ 
+Building file: ../timer1.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"timer1.d" -MT"timer1.o" -c -o "timer1.o" "../timer1.c"
+../timer1.c: In function 'Timer1_setCallBack':
+../timer1.c:115: warning: function return types not compatible due to 'volatile'
+Finished building: ../timer1.c
+ 
+Building file: ../uart.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"uart.d" -MT"uart.o" -c -o "uart.o" "../uart.c"
+Finished building: ../uart.c
+ 
+Building target: HMI_ECU.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,HMI_ECU.map -mmcu=atmega32 -o "HMI_ECU.elf"  ./MICROC1.o ./gpio.o ./keypad.o ./lcd.o ./timer1.o ./uart.o   
+Finished building target: HMI_ECU.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S HMI_ECU.elf  >"HMI_ECU.lss"
+Finished building: HMI_ECU.lss
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 HMI_ECU.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:   15422 bytes (47.1% Full)
+(.text + .data + .bootloader)
+
+Data:        198 bytes (9.7% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+20:03:03 **** Incremental Build of configuration Debug for project MC1 ****
+make all 
+Building file: ../mc1.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"mc1.d" -MT"mc1.o" -c -o "mc1.o" "../mc1.c"
+In file included from ../mc1.c:15:
+c:/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+../mc1.c: In function 'main':
+../mc1.c:193: warning: implicit declaration of function 'KEYPAD_getPressesdKey'
+Finished building: ../mc1.c
+ 
+Building target: MC1.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,MC1.map -mmcu=atmega32 -o "MC1.elf"  ./GPIO.o ./Keypad.o ./LCD.o ./TIMER1.o ./mc1.o ./uart.o   
+./mc1.o: In function `main':
+../mc1.c:193: undefined reference to `KEYPAD_getPressesdKey'
+../mc1.c:196: undefined reference to `KEYPAD_getPressesdKey'
+../mc1.c:203: undefined reference to `KEYPAD_getPressesdKey'
+../mc1.c:206: undefined reference to `KEYPAD_getPressesdKey'
+make: *** [MC1.elf] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+20:03:03 **** Incremental Build of configuration Debug for project MC2 ****
+make all 
+Building file: ../mc2.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"mc2.d" -MT"mc2.o" -c -o "mc2.o" "../mc2.c"
+In file included from ../mc2.c:18:
+c:/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+../mc2.c: In function 'main':
+../mc2.c:162: warning: implicit declaration of function 'UART_reciveString'
+../mc2.c:162: error: incompatible types in assignment
+../mc2.c:164: error: incompatible types in assignment
+make: *** [mc2.o] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+20:04:13 **** Incremental Build of configuration Debug for project HMI_ECU ****
+make all 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 HMI_ECU.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:   15422 bytes (47.1% Full)
+(.text + .data + .bootloader)
+
+Data:        198 bytes (9.7% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+20:04:14 **** Incremental Build of configuration Debug for project MC1 ****
+make all 
+Building file: ../mc1.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"mc1.d" -MT"mc1.o" -c -o "mc1.o" "../mc1.c"
+In file included from ../mc1.c:15:
+c:/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+../mc1.c: In function 'main':
+../mc1.c:206: error: expected expression before ')' token
+make: *** [mc1.o] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+20:04:14 **** Incremental Build of configuration Debug for project MC2 ****
+make all 
+Building file: ../mc2.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"mc2.d" -MT"mc2.o" -c -o "mc2.o" "../mc2.c"
+In file included from ../mc2.c:18:
+c:/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+../mc2.c: In function 'main':
+../mc2.c:162: warning: implicit declaration of function 'UART_reciveString'
+../mc2.c:162: error: incompatible types in assignment
+../mc2.c:164: error: incompatible types in assignment
+make: *** [mc2.o] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+20:06:20 **** Incremental Build of configuration Debug for project HMI_ECU ****
+make all 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 HMI_ECU.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:   15422 bytes (47.1% Full)
+(.text + .data + .bootloader)
+
+Data:        198 bytes (9.7% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+20:06:21 **** Incremental Build of configuration Debug for project MC1 ****
+make all 
+Building file: ../mc1.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"mc1.d" -MT"mc1.o" -c -o "mc1.o" "../mc1.c"
+In file included from ../mc1.c:15:
+c:/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+../mc1.c: In function 'main':
+../mc1.c:206: error: expected expression before ')' token
+make: *** [mc1.o] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+20:06:21 **** Incremental Build of configuration Debug for project MC2 ****
+make all 
+Building file: ../mc2.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"mc2.d" -MT"mc2.o" -c -o "mc2.o" "../mc2.c"
+In file included from ../mc2.c:18:
+c:/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+../mc2.c: In function 'main':
+../mc2.c:135: error: expected ']' before ';' token
+../mc2.c:206: error: expected declaration or statement at end of input
+make: *** [mc2.o] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+20:06:53 **** Incremental Build of configuration Debug for project HMI_ECU ****
+make all 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 HMI_ECU.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:   15422 bytes (47.1% Full)
+(.text + .data + .bootloader)
+
+Data:        198 bytes (9.7% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+20:06:53 **** Incremental Build of configuration Debug for project MC1 ****
+make all 
+Building file: ../mc1.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"mc1.d" -MT"mc1.o" -c -o "mc1.o" "../mc1.c"
+In file included from ../mc1.c:15:
+c:/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+Finished building: ../mc1.c
+ 
+Building target: MC1.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,MC1.map -mmcu=atmega32 -o "MC1.elf"  ./GPIO.o ./Keypad.o ./LCD.o ./TIMER1.o ./mc1.o ./uart.o   
+Finished building target: MC1.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S MC1.elf  >"MC1.lss"
+Finished building: MC1.lss
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 MC1.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:   10528 bytes (32.1% Full)
+(.text + .data + .bootloader)
+
+Data:        146 bytes (7.1% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+20:06:54 **** Incremental Build of configuration Debug for project MC2 ****
+make all 
+Building file: ../mc2.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"mc2.d" -MT"mc2.o" -c -o "mc2.o" "../mc2.c"
+In file included from ../mc2.c:18:
+c:/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+../mc2.c: In function 'main':
+../mc2.c:135: error: expected ']' before ';' token
+../mc2.c:206: error: expected declaration or statement at end of input
+make: *** [mc2.o] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+20:07:41 **** Incremental Build of configuration Debug for project HMI_ECU ****
+make all 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 HMI_ECU.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:   15422 bytes (47.1% Full)
+(.text + .data + .bootloader)
+
+Data:        198 bytes (9.7% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+20:07:42 **** Incremental Build of configuration Debug for project MC1 ****
+make all 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 MC1.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:   10528 bytes (32.1% Full)
+(.text + .data + .bootloader)
+
+Data:        146 bytes (7.1% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+20:07:42 **** Incremental Build of configuration Debug for project MC2 ****
+make all 
+Building file: ../mc2.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"mc2.d" -MT"mc2.o" -c -o "mc2.o" "../mc2.c"
+In file included from ../mc2.c:18:
+c:/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+../mc2.c: In function 'main':
+../mc2.c:162: warning: implicit declaration of function 'UART_reciveString'
+Finished building: ../mc2.c
+ 
+Building target: MC2.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,MC2.map -mmcu=atmega32 -o "MC2.elf"  ./Buzzer.o ./DC_motor.o ./GPIO.o ./PWM.o ./TIMER1.o ./external_eeprom.o ./mc2.o ./twi.o ./uart.o   
+./mc2.o: In function `Timer1_Inc':
+../mc2.c:47: undefined reference to `UART_reciveString'
+../mc2.c:47: undefined reference to `UART_reciveString'
+../mc2.c:47: undefined reference to `Input_Password'
+make: *** [MC2.elf] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+20:08:21 **** Incremental Build of configuration Debug for project HMI_ECU ****
+make all 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 HMI_ECU.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:   15422 bytes (47.1% Full)
+(.text + .data + .bootloader)
+
+Data:        198 bytes (9.7% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+20:08:22 **** Incremental Build of configuration Debug for project MC1 ****
+make all 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 MC1.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:   10528 bytes (32.1% Full)
+(.text + .data + .bootloader)
+
+Data:        146 bytes (7.1% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+20:08:22 **** Incremental Build of configuration Debug for project MC2 ****
+make all 
+Building file: ../mc2.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"mc2.d" -MT"mc2.o" -c -o "mc2.o" "../mc2.c"
+In file included from ../mc2.c:18:
+c:/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+Finished building: ../mc2.c
+ 
+Building target: MC2.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,MC2.map -mmcu=atmega32 -o "MC2.elf"  ./Buzzer.o ./DC_motor.o ./GPIO.o ./PWM.o ./TIMER1.o ./external_eeprom.o ./mc2.o ./twi.o ./uart.o   
+./mc2.o: In function `Timer1_Inc':
+../mc2.c:47: undefined reference to `Input_Password'
+make: *** [MC2.elf] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+20:09:06 **** Incremental Build of configuration Debug for project HMI_ECU ****
+make all 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 HMI_ECU.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:   15422 bytes (47.1% Full)
+(.text + .data + .bootloader)
+
+Data:        198 bytes (9.7% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+20:09:07 **** Incremental Build of configuration Debug for project MC1 ****
+make all 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 MC1.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:   10528 bytes (32.1% Full)
+(.text + .data + .bootloader)
+
+Data:        146 bytes (7.1% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+20:09:07 **** Incremental Build of configuration Debug for project MC2 ****
+make all 
+Building file: ../mc2.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"mc2.d" -MT"mc2.o" -c -o "mc2.o" "../mc2.c"
+In file included from ../mc2.c:18:
+c:/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+../mc2.c: In function 'main':
+../mc2.c:183: warning: implicit declaration of function 'Input_Password'
+Finished building: ../mc2.c
+ 
+Building target: MC2.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,MC2.map -mmcu=atmega32 -o "MC2.elf"  ./Buzzer.o ./DC_motor.o ./GPIO.o ./PWM.o ./TIMER1.o ./external_eeprom.o ./mc2.o ./twi.o ./uart.o   
+./mc2.o: In function `Timer1_Inc':
+../mc2.c:47: undefined reference to `Input_Password'
+make: *** [MC2.elf] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+20:09:58 **** Incremental Build of configuration Debug for project HMI_ECU ****
+make all 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 HMI_ECU.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:   15422 bytes (47.1% Full)
+(.text + .data + .bootloader)
+
+Data:        198 bytes (9.7% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+20:09:59 **** Incremental Build of configuration Debug for project MC1 ****
+make all 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 MC1.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:   10528 bytes (32.1% Full)
+(.text + .data + .bootloader)
+
+Data:        146 bytes (7.1% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+20:09:59 **** Incremental Build of configuration Debug for project MC2 ****
+make all 
+Building file: ../mc2.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"mc2.d" -MT"mc2.o" -c -o "mc2.o" "../mc2.c"
+In file included from ../mc2.c:18:
+c:/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+Finished building: ../mc2.c
+ 
+Building target: MC2.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,MC2.map -mmcu=atmega32 -o "MC2.elf"  ./Buzzer.o ./DC_motor.o ./GPIO.o ./PWM.o ./TIMER1.o ./external_eeprom.o ./mc2.o ./twi.o ./uart.o   
+Finished building target: MC2.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S MC2.elf  >"MC2.lss"
+Finished building: MC2.lss
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 MC2.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:    9464 bytes (28.9% Full)
+(.text + .data + .bootloader)
+
+Data:        282 bytes (13.8% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+20:11:55 **** Incremental Build of configuration Debug for project HMI_ECU ****
+make all 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 HMI_ECU.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:   15422 bytes (47.1% Full)
+(.text + .data + .bootloader)
+
+Data:        198 bytes (9.7% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+20:11:55 **** Incremental Build of configuration Debug for project MC1 ****
+make all 
+Building file: ../mc1.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"mc1.d" -MT"mc1.o" -c -o "mc1.o" "../mc1.c"
+In file included from ../mc1.c:15:
+c:/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+Finished building: ../mc1.c
+ 
+Building target: MC1.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,MC1.map -mmcu=atmega32 -o "MC1.elf"  ./GPIO.o ./Keypad.o ./LCD.o ./TIMER1.o ./mc1.o ./uart.o   
+Finished building target: MC1.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S MC1.elf  >"MC1.lss"
+Finished building: MC1.lss
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 MC1.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:   12222 bytes (37.3% Full)
+(.text + .data + .bootloader)
+
+Data:        146 bytes (7.1% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+20:11:55 **** Incremental Build of configuration Debug for project MC2 ****
+make all 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 MC2.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:    9464 bytes (28.9% Full)
+(.text + .data + .bootloader)
+
+Data:        282 bytes (13.8% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+20:20:01 **** Incremental Build of configuration Debug for project HMI_ECU ****
+make all 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 HMI_ECU.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:   15422 bytes (47.1% Full)
+(.text + .data + .bootloader)
+
+Data:        198 bytes (9.7% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+20:20:01 **** Incremental Build of configuration Debug for project MC1 ****
+make all 
+Building file: ../mc1.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"mc1.d" -MT"mc1.o" -c -o "mc1.o" "../mc1.c"
+In file included from ../mc1.c:15:
+c:/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+Finished building: ../mc1.c
+ 
+Building target: MC1.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,MC1.map -mmcu=atmega32 -o "MC1.elf"  ./GPIO.o ./Keypad.o ./LCD.o ./TIMER1.o ./mc1.o ./uart.o   
+Finished building target: MC1.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S MC1.elf  >"MC1.lss"
+Finished building: MC1.lss
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 MC1.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:   12222 bytes (37.3% Full)
+(.text + .data + .bootloader)
+
+Data:        146 bytes (7.1% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+20:20:02 **** Incremental Build of configuration Debug for project MC2 ****
+make all 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 MC2.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:    9464 bytes (28.9% Full)
+(.text + .data + .bootloader)
+
+Data:        282 bytes (13.8% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+20:25:43 **** Incremental Build of configuration Debug for project HMI_ECU ****
+make all 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 HMI_ECU.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:   15422 bytes (47.1% Full)
+(.text + .data + .bootloader)
+
+Data:        198 bytes (9.7% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+20:25:43 **** Incremental Build of configuration Debug for project MC1 ****
+make all 
+Building file: ../mc1.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"mc1.d" -MT"mc1.o" -c -o "mc1.o" "../mc1.c"
+In file included from ../mc1.c:15:
+c:/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+Finished building: ../mc1.c
+ 
+Building target: MC1.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,MC1.map -mmcu=atmega32 -o "MC1.elf"  ./GPIO.o ./Keypad.o ./LCD.o ./TIMER1.o ./mc1.o ./uart.o   
+Finished building target: MC1.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S MC1.elf  >"MC1.lss"
+Finished building: MC1.lss
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 MC1.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:   12238 bytes (37.3% Full)
+(.text + .data + .bootloader)
+
+Data:        146 bytes (7.1% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+20:25:44 **** Incremental Build of configuration Debug for project MC2 ****
+make all 
+Building file: ../mc2.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"mc2.d" -MT"mc2.o" -c -o "mc2.o" "../mc2.c"
+In file included from ../mc2.c:18:
+c:/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+Finished building: ../mc2.c
+ 
+Building target: MC2.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,MC2.map -mmcu=atmega32 -o "MC2.elf"  ./Buzzer.o ./DC_motor.o ./GPIO.o ./PWM.o ./TIMER1.o ./external_eeprom.o ./mc2.o ./twi.o ./uart.o   
+Finished building target: MC2.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S MC2.elf  >"MC2.lss"
+Finished building: MC2.lss
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 MC2.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:    9476 bytes (28.9% Full)
+(.text + .data + .bootloader)
+
+Data:        282 bytes (13.8% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+20:26:27 **** Incremental Build of configuration Debug for project HMI_ECU ****
+make all 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 HMI_ECU.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:   15422 bytes (47.1% Full)
+(.text + .data + .bootloader)
+
+Data:        198 bytes (9.7% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+20:26:27 **** Incremental Build of configuration Debug for project MC1 ****
+make all 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 MC1.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:   12238 bytes (37.3% Full)
+(.text + .data + .bootloader)
+
+Data:        146 bytes (7.1% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+20:26:27 **** Incremental Build of configuration Debug for project MC2 ****
+make all 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 MC2.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:    9476 bytes (28.9% Full)
+(.text + .data + .bootloader)
+
+Data:        282 bytes (13.8% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+20:27:39 **** Incremental Build of configuration Debug for project HMI_ECU ****
+make all 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 HMI_ECU.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:   15422 bytes (47.1% Full)
+(.text + .data + .bootloader)
+
+Data:        198 bytes (9.7% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+20:27:39 **** Incremental Build of configuration Debug for project MC1 ****
+make all 
+Building file: ../mc1.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"mc1.d" -MT"mc1.o" -c -o "mc1.o" "../mc1.c"
+In file included from ../mc1.c:15:
+c:/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+Finished building: ../mc1.c
+ 
+Building target: MC1.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,MC1.map -mmcu=atmega32 -o "MC1.elf"  ./GPIO.o ./Keypad.o ./LCD.o ./TIMER1.o ./mc1.o ./uart.o   
+Finished building target: MC1.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S MC1.elf  >"MC1.lss"
+Finished building: MC1.lss
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 MC1.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:   11000 bytes (33.6% Full)
+(.text + .data + .bootloader)
+
+Data:        146 bytes (7.1% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+20:27:40 **** Incremental Build of configuration Debug for project MC2 ****
+make all 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 MC2.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:    9476 bytes (28.9% Full)
+(.text + .data + .bootloader)
+
+Data:        282 bytes (13.8% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+20:28:37 **** Incremental Build of configuration Debug for project MC1 ****
+make all 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 MC1.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:   11000 bytes (33.6% Full)
+(.text + .data + .bootloader)
+
+Data:        146 bytes (7.1% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+20:28:52 **** Incremental Build of configuration Debug for project HMI_ECU ****
+make all 
+Building file: ../MICROC1.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"MICROC1.d" -MT"MICROC1.o" -c -o "MICROC1.o" "../MICROC1.c"
+In file included from ../MICROC1.c:8:
+c:/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+Finished building: ../MICROC1.c
+ 
+Building file: ../gpio.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"gpio.d" -MT"gpio.o" -c -o "gpio.o" "../gpio.c"
+Finished building: ../gpio.c
+ 
+Building file: ../keypad.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"keypad.d" -MT"keypad.o" -c -o "keypad.o" "../keypad.c"
+In file included from ../keypad.c:14:
+c:/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+Finished building: ../keypad.c
+ 
+Building file: ../lcd.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"lcd.d" -MT"lcd.o" -c -o "lcd.o" "../lcd.c"
+In file included from ../lcd.c:13:
+c:/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+../lcd.c: In function 'LCD_intgerToString':
+../lcd.c:209: warning: implicit declaration of function 'itoa'
+Finished building: ../lcd.c
+ 
+Building file: ../timer1.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"timer1.d" -MT"timer1.o" -c -o "timer1.o" "../timer1.c"
+../timer1.c: In function 'Timer1_setCallBack':
+../timer1.c:115: warning: function return types not compatible due to 'volatile'
+Finished building: ../timer1.c
+ 
+Building file: ../uart.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"uart.d" -MT"uart.o" -c -o "uart.o" "../uart.c"
+Finished building: ../uart.c
+ 
+Building target: HMI_ECU.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,HMI_ECU.map -mmcu=atmega32 -o "HMI_ECU.elf"  ./MICROC1.o ./gpio.o ./keypad.o ./lcd.o ./timer1.o ./uart.o   
+Finished building target: HMI_ECU.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S HMI_ECU.elf  >"HMI_ECU.lss"
+Finished building: HMI_ECU.lss
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 HMI_ECU.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:   15422 bytes (47.1% Full)
+(.text + .data + .bootloader)
+
+Data:        198 bytes (9.7% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+20:28:53 **** Incremental Build of configuration Debug for project MC1 ****
+make all 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 MC1.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:   11000 bytes (33.6% Full)
+(.text + .data + .bootloader)
+
+Data:        146 bytes (7.1% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+20:28:53 **** Incremental Build of configuration Debug for project MC2 ****
+make all 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 MC2.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:    9476 bytes (28.9% Full)
+(.text + .data + .bootloader)
+
+Data:        282 bytes (13.8% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+20:28:57 **** Incremental Build of configuration Debug for project MC2 ****
+make all 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 MC2.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:    9476 bytes (28.9% Full)
+(.text + .data + .bootloader)
+
+Data:        282 bytes (13.8% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+20:29:06 **** Incremental Build of configuration Debug for project MC1 ****
+make all 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 MC1.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:   11000 bytes (33.6% Full)
+(.text + .data + .bootloader)
+
+Data:        146 bytes (7.1% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+20:29:06 **** Incremental Build of configuration Debug for project MC2 ****
+make all 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 MC2.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:    9476 bytes (28.9% Full)
+(.text + .data + .bootloader)
+
+Data:        282 bytes (13.8% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+20:33:08 **** Incremental Build of configuration Debug for project MC1 ****
+make all 
+Building file: ../mc1.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"mc1.d" -MT"mc1.o" -c -o "mc1.o" "../mc1.c"
+In file included from ../mc1.c:15:
+c:/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+Finished building: ../mc1.c
+ 
+Building target: MC1.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,MC1.map -mmcu=atmega32 -o "MC1.elf"  ./GPIO.o ./Keypad.o ./LCD.o ./TIMER1.o ./mc1.o ./uart.o   
+Finished building target: MC1.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S MC1.elf  >"MC1.lss"
+Finished building: MC1.lss
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 MC1.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:   12238 bytes (37.3% Full)
+(.text + .data + .bootloader)
+
+Data:        146 bytes (7.1% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+20:33:09 **** Incremental Build of configuration Debug for project MC2 ****
+make all 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 MC2.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:    9476 bytes (28.9% Full)
+(.text + .data + .bootloader)
+
+Data:        282 bytes (13.8% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 

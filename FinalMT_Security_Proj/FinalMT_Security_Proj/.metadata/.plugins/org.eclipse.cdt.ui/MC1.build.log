@@ -1,0 +1,36 @@
+20:33:08 **** Incremental Build of configuration Debug for project MC1 ****
+make all 
+Building file: ../mc1.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"mc1.d" -MT"mc1.o" -c -o "mc1.o" "../mc1.c"
+In file included from ../mc1.c:15:
+c:/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+Finished building: ../mc1.c
+ 
+Building target: MC1.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,MC1.map -mmcu=atmega32 -o "MC1.elf"  ./GPIO.o ./Keypad.o ./LCD.o ./TIMER1.o ./mc1.o ./uart.o   
+Finished building target: MC1.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S MC1.elf  >"MC1.lss"
+Finished building: MC1.lss
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 MC1.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:   12238 bytes (37.3% Full)
+(.text + .data + .bootloader)
+
+Data:        146 bytes (7.1% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+
+20:33:09 Build Finished. 0 errors, 1 warnings. (took 395ms)
+

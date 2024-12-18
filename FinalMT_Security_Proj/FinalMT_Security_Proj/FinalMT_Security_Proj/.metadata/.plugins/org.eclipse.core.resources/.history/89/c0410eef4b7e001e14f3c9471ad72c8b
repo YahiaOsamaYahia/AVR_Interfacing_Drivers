@@ -1,0 +1,49 @@
+/*
+ * Keypad.h
+ *
+ *  Created on: Oct 6, 2023
+ *      Author: Lenovo
+ */
+
+#ifndef KEYPAD_H_
+#define KEYPAD_H_
+
+
+#include "std_types.h"
+
+/*****************************************************************************************
+ * 									Definitions
+ ****************************************************************************************/
+
+/*Keypad Configurations for number of rows and columns*/
+#define KEYPAD_COLUMNS					4
+#define KEYPAD_ROWS						4
+
+/*Keypad Port Configuration*/
+#define KEYPAD_ROW_PORT_ID				PORTC_ID
+#define KEYPAD_FIRST_ROW_PIN_ID			PIN0_ID
+
+
+#define KEYPAD_COLUMN_PORT_ID			PORTC_ID
+#define KEYPAD_FIRST_COLUMN_PIN_ID		PIN4_ID
+
+/*Keypad button logic configurations IN CASE OF PULL_UP
+ * (if you're going to work  with PULL_DOWN mode , the logic states'll be changed)
+ */
+#define KEYPAD_BUTTON_PRESSED			LOGIC_LOW
+#define KEYPAD_BUTTON_NOT_PRESSED		LOGIC_HIGH
+
+
+/*******************************************************************************************
+ * 							Functions Prototypes
+ ******************************************************************************************/
+
+
+/*
+ * Description :
+ * Get the Keypad pressed button
+ */
+uint8 KEYPAD_getPressedKey(void);
+
+
+#endif /* KEYPAD_H_ */
